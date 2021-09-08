@@ -247,8 +247,8 @@ namespace QuickLauncher
                 CreateShortCuts((int)rows_per_group, shortcuts);
             }
 
-            //width of the app
-            this.Width = (Settings.columns * (Dimension + Separator) - Separator) + (GridMargin * 2);
+            //width of the app. The 2x extra are needed because of wpf reasons...
+            this.Width = (Settings.columns * (Dimension + Separator) - Separator) + (GridMargin * 2) + 2;
 
             //height of the app
             height = height + (GridMargin * 2) + HeaderHeight + SystemButtonRowHeight;
