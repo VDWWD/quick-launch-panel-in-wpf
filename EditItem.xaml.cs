@@ -67,13 +67,13 @@ namespace QuickLauncher
             textbox_name.Text = ShortCut.name;
             textbox_exec.Text = ShortCut.executable_path;
             textbox_args.Text = ShortCut.executable_arguments;
-            textbox_icon.Text = ShortCut.icon;
             textbox_color_icon.Text = ShortCut.color_icon;
             textbox_index.Text = ShortCut.index;
             slider_groups.Value = ShortCut.group_int;
             if (!IsNewIcon)
             {
                 textbox_color_button.Text = ShortCut.color_button;
+                textbox_icon.Text = ShortCut.icon;
             }
 
             //show stats on edit
@@ -137,6 +137,12 @@ namespace QuickLauncher
             {
                 button_delete.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Delete, Classes.ResourceController.BrushWhite, Localizer.GetLocalized("editshortcut-delete"));
                 button_save.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Save, Classes.ResourceController.BrushWhite, Localizer.GetLocalized("editshortcut-save"));
+            }
+
+            //trigger the slider change event for the inital colors
+            if (IsNewIcon)
+            {
+                slider_groups_ValueChanged(null, null);
             }
         }
 
@@ -370,13 +376,16 @@ namespace QuickLauncher
 
             var old_shortcut = MainWindow.Settings.shortcuts.Where(x => x.group_int == Convert.ToInt32(slider_groups.Value)).FirstOrDefault();
 
+            //if no shortcut is found in the group use the default values, otherwise use the existing colors
             if (old_shortcut == null)
             {
                 textbox_color_button.Text = ShortCut.color_button;
+                textbox_color_icon.Text = ShortCut.color_icon;
             }
             else
             {
                 textbox_color_button.Text = old_shortcut.color_button;
+                textbox_color_icon.Text = old_shortcut.color_icon;
             }
         }
     }
