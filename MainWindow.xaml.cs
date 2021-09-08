@@ -247,7 +247,7 @@ namespace QuickLauncher
                 CreateShortCuts((int)rows_per_group, shortcuts);
             }
 
-            //width of the app. The 2x extra are needed because of wpf reasons...
+            //width of the app. The 2 px extra are needed because of the outer border
             this.Width = (Settings.columns * (Dimension + Separator) - Separator) + (GridMargin * 2) + 2;
 
             //height of the app
