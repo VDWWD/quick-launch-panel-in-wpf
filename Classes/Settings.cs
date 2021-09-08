@@ -494,6 +494,7 @@ namespace QuickLauncher.Classes
                 group = "1";
                 clicks = "0";
                 executable_arguments = "";
+                date_added = DateTime.Now;
             }
         }
 
