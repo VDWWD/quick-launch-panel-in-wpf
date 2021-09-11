@@ -279,15 +279,15 @@ namespace QuickLauncher.Classes
             {
                 if (sortorder == Enums.SortOrder.SortOrder)
                 {
-                    shortcuts = shortcuts.OrderBy(x => x.index_int).ThenBy(x => x.name).ThenBy(x => x.color_button).ToList();
+                    shortcuts = shortcuts.OrderBy(x => x.index_int).ThenBy(x => x.name).ToList();
                 }
                 else if (sortorder == Enums.SortOrder.MostUsed)
                 {
-                    shortcuts = shortcuts.OrderByDescending(x => x.clicks).ThenBy(x => x.name).ThenBy(x => x.color_button).ToList();
+                    shortcuts = shortcuts.OrderByDescending(x => x.clicks).ThenBy(x => x.name).ToList();
                 }
                 else
                 {
-                    shortcuts = shortcuts.OrderBy(x => x.name).ThenBy(x => x.index_int).ThenBy(x => x.color_button).ToList();
+                    shortcuts = shortcuts.OrderBy(x => x.name).ThenBy(x => x.index_int).ToList();
                 }
 
                 //make sure the shortcust atleast have a name and executable_path
