@@ -166,10 +166,9 @@ namespace QuickLauncher
 
                 NextStartRow = 0;
             }
-
-            //pin the app if stored in settings
-            if (Settings.always_on_top)
+            else if (Settings.always_on_top)
             {
+                //pin the app if stored in settings
                 Button_pin_Click(null, null);
             }
 
@@ -511,6 +510,7 @@ namespace QuickLauncher
             NormalWindow();
         }
 
+
         /// <summary>
         /// Closes the app from the context menu
         /// </summary>
@@ -518,6 +518,7 @@ namespace QuickLauncher
         {
             CloseApp();
         }
+
 
         /// <summary>
         /// Opens the about windows from the context menu
@@ -533,6 +534,7 @@ namespace QuickLauncher
 
             about.ShowDialog();
         }
+
 
         /// <summary>
         /// Sets the window to the top or not
