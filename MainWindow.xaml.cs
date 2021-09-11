@@ -119,6 +119,10 @@ namespace QuickLauncher
                 }
             };
 
+            //add the click commands
+            TaskbarIcon.DoubleClickCommand = new Classes.IconController.FaviconDoubleClickCommand();
+            TaskbarIcon.LeftClickCommand = new Classes.IconController.FaviconDoubleClickCommand();
+
             //add items to the menu
             TaskbarIcon.ContextMenu.Items.Add(Classes.ResourceController.CreateContextMenuItem(Classes.Enums.Icon.Maximize, Localizer.GetLocalized("mainwindow-maximize"), Contextmenu_maximize_Click));
             TaskbarIcon.ContextMenu.Items.Add(Classes.ResourceController.CreateContextMenuItem(Classes.Enums.Icon.About, Localizer.GetLocalized("mainwindow-about"), Button_about_Click));
@@ -444,7 +448,7 @@ namespace QuickLauncher
         /// <summary>
         /// Mazimizes the window
         /// </summary>
-        private void NormalWindow()
+        public void NormalWindow()
         {
             this.Show();
             this.Activate();
