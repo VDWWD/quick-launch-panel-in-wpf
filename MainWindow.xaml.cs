@@ -252,14 +252,15 @@ namespace QuickLauncher
 
             //width of the app. The 2 px extra are needed because of the outer border
             this.Width = (Settings.columns * (Dimension + Separator) - Separator) + (GridMargin * 2) + 2;
+            this.MinWidth = this.Width;
 
             //height of the app
             height = height + (GridMargin * 2) + HeaderHeight + SystemButtonRowHeight;
             if (height < MinHeight)
                 height = MinHeight;
 
-            this.MinHeight = MinHeight;
             this.Height = height;
+            this.MinHeight = height;
 
             //hide edit button if there are no shortcuts
             if (Settings.shortcuts.Count == 0)
