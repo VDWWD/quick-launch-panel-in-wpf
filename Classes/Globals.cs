@@ -25,7 +25,7 @@ namespace QuickLauncher.Classes
         public static void InitGlobals()
         {
             //declare some global variables
-            AppVersion = 1.3m;
+            AppVersion = 1.4m;
             AppName = "QuickLauncher";
             AppEmail = "erwin@vanderwaal.eu";
             AppUrl = "https://www.vanderwaal.eu";
