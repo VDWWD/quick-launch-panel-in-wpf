@@ -64,7 +64,7 @@ namespace QuickLauncher.Classes
             try
             {
                 var key = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", "1");
-                if (key != null && key.ToString() == "0")
+                if (key?.ToString() == "0")
                     _IsDarkMode = true;
             }
             catch
