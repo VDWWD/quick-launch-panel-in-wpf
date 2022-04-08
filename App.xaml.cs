@@ -8,7 +8,7 @@ namespace QuickLauncher
 {
     public partial class App : Application, ISingleInstanceApp
     {
-        // To create a single instance app: https://codereview.stackexchange.com/questions/20871/single-instance-wpf-application
+        //to create a single instance app: https://codereview.stackexchange.com/questions/20871/single-instance-wpf-application
 
         private const string UniqueKey = "76f64c26-d39f-4543-af76-1c2cdbba57fd";
 

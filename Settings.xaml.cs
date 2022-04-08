@@ -38,7 +38,7 @@ namespace QuickLauncher
             //combobox values
             combobox_sortorder.Items.Add(new Classes.Setting.ComboboxSortorder() { sortorder = Classes.Enums.SortOrder.Name, name = Localizer.GetLocalized("settings-sorting-name") });
             combobox_sortorder.Items.Add(new Classes.Setting.ComboboxSortorder() { sortorder = Classes.Enums.SortOrder.MostUsed, name = Localizer.GetLocalized("settings-sorting-mostused") });
-            combobox_sortorder.Items.Add(new Classes.Setting.ComboboxSortorder() { sortorder = Classes.Enums.SortOrder.SortOrder, name = Localizer.GetLocalized("settings-sorting-sortorder") });
+            combobox_sortorder.Items.Add(new Classes.Setting.ComboboxSortorder() { sortorder = Classes.Enums.SortOrder.SortIndex, name = Localizer.GetLocalized("settings-sorting-sortorder") });
 
             //set the values
             combobox_sortorder.SelectedValue = MainWindow.Settings.sortorder;
