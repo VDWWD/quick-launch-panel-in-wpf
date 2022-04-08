@@ -36,7 +36,7 @@ namespace QuickLauncher.Classes
         public enum SortOrder
         {
             Name,
-            SortOrder,
+            SortIndex,
             MostUsed
         }
     }

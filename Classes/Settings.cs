@@ -54,7 +54,7 @@ namespace QuickLauncher.Classes
             {
                 try
                 {
-                    Task.Run(() => MaterialDesignIcons.CreateIconList());
+                    Task.Run(() => MaterialDesignIcons.CreateIconList(settings));
                 }
                 catch
                 {
@@ -277,13 +277,13 @@ namespace QuickLauncher.Classes
 
             public void Sort()
             {
-                if (sortorder == Enums.SortOrder.SortOrder)
+                if (sortorder == Enums.SortOrder.SortIndex)
                 {
                     shortcuts = shortcuts.OrderBy(x => x.index_int).ThenBy(x => x.name).ToList();
                 }
                 else if (sortorder == Enums.SortOrder.MostUsed)
                 {
-                    shortcuts = shortcuts.OrderByDescending(x => x.clicks).ThenBy(x => x.name).ToList();
+                    shortcuts = shortcuts.OrderByDescending(x => x.clicks_int).ThenBy(x => x.name).ToList();
                 }
                 else
                 {

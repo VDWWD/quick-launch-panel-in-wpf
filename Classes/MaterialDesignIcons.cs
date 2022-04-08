@@ -14,9 +14,9 @@ namespace QuickLauncher.Classes
         /// Download the materialdesignicons master.zip from github.com. Then read the zip to get all the icon names and their path and store them on the disk in json format
         /// This is the only time the app will try to connect to the internet. Delete the json to trigger the download again
         /// </summary>
-        public static void CreateIconList()
+        public static void CreateIconList(Setting.Settings settings)
         {
-            if (string.IsNullOrEmpty(MainWindow.Settings.iconpack_url) || !MainWindow.Settings.iconpack_url.Contains("://"))
+            if (string.IsNullOrEmpty(settings.iconpack_url) || !settings.iconpack_url.Contains("://"))
                 return;
 
             var list = new List<MaterialIcon>();
@@ -24,7 +24,7 @@ namespace QuickLauncher.Classes
             using (var client = new WebClient())
             {
                 //download de material icons from github
-                var data = client.DownloadData(MainWindow.Settings.iconpack_url);
+                var data = client.DownloadData(settings.iconpack_url);
 
                 //read the downloaded zip
                 using (var zip = new ZipArchive(new MemoryStream(data), ZipArchiveMode.Read))
@@ -67,7 +67,7 @@ namespace QuickLauncher.Classes
             File.WriteAllText(Globals.AppPathIconPackFile, json);
 
             //check for material icons in the shortcuts list
-            MainWindow.Settings.CheckIcons(list);
+            settings.CheckIcons(list);
         }
 
 
