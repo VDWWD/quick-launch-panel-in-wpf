@@ -62,7 +62,7 @@
 
         <TextBlock Grid.Column="0" Grid.Row="4" Text="[executable]" Name="txt_label2" Style="{StaticResource OverWindowTekstSmall}" VerticalAlignment="Bottom" FontWeight="Bold" Margin="3, 0, 0, 3" Grid.ColumnSpan="5" />
 
-        <TextBox Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Name="textbox_exec" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="1000" TextChanged="TextBox_TextChanged" TextWrapping="NoWrap" />
+        <TextBox Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Name="textbox_exec" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="1000" TextChanged="TextBox_TextChanged" TextWrapping="NoWrap" ContextMenu="{x:Null}" />
 
         <Button Name="button_browse" Grid.Column="7" Grid.Row="5" Click="button_browse_Click" Style="{StaticResource Button_Settings}" VerticalAlignment="Center" HorizontalAlignment="Right">
             <Button.ToolTip>
@@ -72,11 +72,11 @@
 
         <TextBlock Grid.Column="0" Grid.Row="6" Text="[arguments]" Name="txt_label3" Style="{StaticResource OverWindowTekstSmall}" VerticalAlignment="Bottom" FontWeight="Bold" Margin="3, 0, 0, 3" Grid.ColumnSpan="5" />
 
-        <TextBox Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="5" Name="textbox_args" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="1000" TextWrapping="NoWrap" />
+        <TextBox Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="5" Name="textbox_args" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="1000" TextWrapping="NoWrap" ContextMenu="{x:Null}" />
 
         <TextBlock Grid.Column="0" Grid.Row="8" Text="[icon path]" Name="txt_label4" Style="{StaticResource OverWindowTekstSmall}" VerticalAlignment="Bottom" FontWeight="Bold" Margin="3, 0, 0, 3" Grid.ColumnSpan="5" />
 
-        <TextBox Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="4" Name="textbox_icon" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="5000" TextChanged="TextBox_TextChanged" AcceptsReturn="False" TextWrapping="NoWrap" />
+        <TextBox Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="4" Name="textbox_icon" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="5000" TextChanged="TextBox_TextChanged" AcceptsReturn="False" TextWrapping="NoWrap" ContextMenu="{x:Null}" />
 
         <Button Name="button_icon" Grid.Column="4" Grid.Row="9" Click="button_icon_Click" Style="{StaticResource Button_Settings}" VerticalAlignment="Center" HorizontalAlignment="Right">
             <Button.ToolTip>
@@ -86,7 +86,7 @@
         
         <TextBlock Grid.Column="0" Grid.Row="10" Text="[button color]" Name="txt_label5" Style="{StaticResource OverWindowTekstSmall}" VerticalAlignment="Bottom" FontWeight="Bold" Margin="3, 0, 0, 3" />
 
-        <TextBox Grid.Column="0" Grid.Row="11" Name="textbox_color_button" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="7" TextWrapping="NoWrap" />
+        <TextBox Grid.Column="0" Grid.Row="11" Name="textbox_color_button" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="7" TextWrapping="NoWrap" ContextMenu="{x:Null}" />
 
         <Button Name="button_colorpicker1" Grid.Column="1" Grid.Row="11" Click="button_colorpicker_Click" Style="{StaticResource Button_Settings}" VerticalAlignment="Center" HorizontalAlignment="Right">
             <Button.ToolTip>
@@ -96,7 +96,7 @@
         
         <TextBlock Grid.Column="3" Grid.Row="10" Text="[icon color]" Name="txt_label6" Style="{StaticResource OverWindowTekstSmall}" VerticalAlignment="Bottom" FontWeight="Bold" Margin="3, 0, 0, 3" />
 
-        <TextBox Grid.Column="3" Grid.Row="11" Name="textbox_color_icon" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="7" TextWrapping="NoWrap" />
+        <TextBox Grid.Column="3" Grid.Row="11" Name="textbox_color_icon" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="7" TextWrapping="NoWrap" ContextMenu="{x:Null}" />
 
         <Button Name="button_colorpicker2" Grid.Column="5" Grid.Row="11" Click="button_colorpicker_Click" Style="{StaticResource Button_Settings}" VerticalAlignment="Center" HorizontalAlignment="Right">
             <Button.ToolTip>
@@ -106,7 +106,7 @@
 
         <TextBlock Grid.Column="0" Grid.Row="12" Text="[index number]" Name="txt_label7" Style="{StaticResource OverWindowTekstSmall}" VerticalAlignment="Bottom" FontWeight="Bold" Margin="3, 0, 0, 3" Grid.ColumnSpan="5" />
 
-        <TextBox Grid.Column="0" Grid.Row="13"  Name="textbox_index" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="3" TextChanged="textbox_index_TextChanged" TextWrapping="NoWrap" />
+        <TextBox Grid.Column="0" Grid.Row="13"  Name="textbox_index" Style="{StaticResource TextBox_Normal}" Padding="0,3,0,0" MaxLength="3" TextChanged="textbox_index_TextChanged" TextWrapping="NoWrap" ContextMenu="{x:Null}" />
 
         <Button Grid.Column="0" Grid.Row="15" HorizontalAlignment="Left" Click="Button_save_Click" Width="105" Height="30" Style="{StaticResource Button_Normal}" Name="button_save"/>
 
